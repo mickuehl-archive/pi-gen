@@ -5,4 +5,5 @@ postrun.sh
 *-pc
 apt-cacher-ng/
 config
+**/wget-log
 **/wget-log.*
