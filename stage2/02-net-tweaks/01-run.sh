@@ -6,9 +6,9 @@ install -v -m 644 files/wait.conf		"${ROOTFS_DIR}/etc/systemd/system/dhcpcd.serv
 install -v -d					"${ROOTFS_DIR}/etc/wpa_supplicant"
 install -v -m 600 files/wpa_supplicant.conf	"${ROOTFS_DIR}/etc/wpa_supplicant/"
 
-#if [ -v WPA_COUNTRY ]; then
-#	echo "country=${WPA_COUNTRY}" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
-#fi
+if [ -v WPA_COUNTRY ]; then
+	echo "country=${WPA_COUNTRY}" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
+fi
 
 if [ -v WPA_ESSID ] && [ -v WPA_PASSWORD ]; then
 on_chroot <<EOF
@@ -25,7 +25,7 @@ network={
 EOL
 fi
 
-echo "country=${WPA_COUNTRY}" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
+#echo "country=${WPA_COUNTRY}" >> "${ROOTFS_DIR}/etc/wpa_supplicant/wpa_supplicant.conf"
 
 # Disable wifi on 5GHz models
 mkdir -p "${ROOTFS_DIR}/var/lib/systemd/rfkill/"

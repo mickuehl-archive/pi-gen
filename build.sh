@@ -167,9 +167,9 @@ export TARGET_HOSTNAME=${TARGET_HOSTNAME:-raspberrypi}
 export FIRST_USER_NAME=${FIRST_USER_NAME:-pi}
 export FIRST_USER_PASS=${FIRST_USER_PASS:-raspberry}
 export RELEASE=${RELEASE:-buster}
-export WPA_ESSID
-export WPA_PASSWORD
-export WPA_COUNTRY"${WPA_COUNTRY:-DE}"
+export WPA_ESSID=${WPA_ESSID:-"undefined"}
+export WPA_PASSWORD=${WPA_PASSWORD:-"undefined"}
+export WPA_COUNTRY=${WPA_COUNTRY:-"undefined"}
 export ENABLE_SSH="${ENABLE_SSH:-0}"
 
 export LOCALE_DEFAULT="${LOCALE_DEFAULT:-en_GB.UTF-8}"
