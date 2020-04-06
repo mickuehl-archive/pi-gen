@@ -169,7 +169,7 @@ export FIRST_USER_PASS=${FIRST_USER_PASS:-raspberry}
 export RELEASE=${RELEASE:-buster}
 export WPA_ESSID
 export WPA_PASSWORD
-export WPA_COUNTRY
+export WPA_COUNTRY"${WPA_COUNTRY:-DE}"
 export ENABLE_SSH="${ENABLE_SSH:-0}"
 
 export LOCALE_DEFAULT="${LOCALE_DEFAULT:-en_GB.UTF-8}"

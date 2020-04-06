@@ -29,3 +29,6 @@ fi
 mkdir -p "${ROOTFS_DIR}/var/lib/systemd/rfkill/"
 echo 1 > "${ROOTFS_DIR}/var/lib/systemd/rfkill/platform-3f300000.mmcnr:wlan"
 echo 1 > "${ROOTFS_DIR}/var/lib/systemd/rfkill/platform-fe300000.mmcnr:wlan"
+
+# debug
+cat /etc/wpa_supplicant/wpa_supplicant.conf
