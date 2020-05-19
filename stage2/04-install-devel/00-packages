@@ -4,11 +4,3 @@ git
 ntp
 ffmpeg
 sshpass
-python3-dev 
-python3-pip 
-python3-virtualenv
-python3-numpy
-python3-pandas
-python3-picamera
-python3-rpi.gpio
-
