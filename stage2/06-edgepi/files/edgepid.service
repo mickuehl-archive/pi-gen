@@ -1,0 +1,14 @@
+[Unit]
+Description=EdgePi Agent
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=on-failure
+User=cloud
+ExecStartPre=/usr/bin/edgepiup
+ExecStart=/home/cloud/edgepid
+
+[Install]
+WantedBy=multi-user.target
