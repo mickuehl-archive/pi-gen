@@ -1,7 +1,0 @@
-#!/bin/bash -e
-
-wget -q https://github.com/shadow-racer/edge-pi-agent/archive/latest.zip -O /tmp/latest.zip 
-unzip -q -o /tmp/latest.zip -d /home/cloud
-
-mv /home/cloud/edge-pi-agent-latest/edgepid /home/cloud/edgepid
-rm -rf /home/cloud/edge-pi-agent-latest

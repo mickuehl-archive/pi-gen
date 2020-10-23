@@ -1,10 +1,11 @@
 #!/bin/bash -e
 
+install -d "${ROOTFS_DIR}/opt/edgepi"
+
 install -v -m 644 files/edgepid.service	"${ROOTFS_DIR}/etc/systemd/system/"
 
-install -v -m 644 files/edgepiup		"${ROOTFS_DIR}/usr/bin/"
+install -v -m 644 files/update "${ROOTFS_DIR}/opt/edgepi/"
 
 on_chroot << EOF
-systemctl daemon-reload
 systemctl enable edgepid
 EOF

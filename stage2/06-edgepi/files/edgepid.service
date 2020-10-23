@@ -6,9 +6,10 @@ After=network-online.target
 [Service]
 Type=simple
 Restart=on-failure
-User=cloud
-ExecStartPre=/usr/bin/edgepiup
-ExecStart=/home/cloud/edgepid
+RestartSec=10
+User=root
+ExecStartPre=/opt/edgepi/update
+ExecStart=/opt/edgepi/edgepid
 
 [Install]
 WantedBy=multi-user.target
